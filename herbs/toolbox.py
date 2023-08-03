@@ -39,6 +39,8 @@ class ToolBox(QObject):
         self.check_btn = QAction(QIcon('icons/toolbar/accept.svg'), 'Accept and Transfer', self)
         self.auto_reg_btn = QAction(QIcon('icons/toolbar/auto_reg_icon.png'), 'Auto Register', self)
         self.auto_reg_btn.triggered.connect(self.auto_register)
+        self.auto_reg_btn = QAction(QIcon('icons/toolbar/auto_reg_icon.png'), 'Auto Registration', self)
+        self.auto_reg_btn.triggered.connect(self.auto_registration)
 
         lasso_btn = QAction(QIcon('icons/toolbar/lasso.svg'), 'Polygon Lasso', self)
         lasso_btn.setCheckable(True)

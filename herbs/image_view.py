@@ -637,8 +637,7 @@ class ImageView(QObject):
         self.img_stacks.image_dict['tri_pnts'].set_range(self.img_size[1], self.img_size[0])
         self.get_corner_and_lines()
 
+    def get_current_histology_slice(self):
+        return self.current_img
+
     # def clear_curve_widget(self):
-
-
-
-
