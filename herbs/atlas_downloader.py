@@ -314,5 +314,3 @@ class AtlasDownloader(QDialog):
     #         self.close()
     #     else:
     #         return
-
-
