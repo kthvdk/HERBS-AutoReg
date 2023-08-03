@@ -549,3 +549,8 @@ class ToolBox(QObject):
             self.multi_shanks = True
         else:
             self.multi_shanks = False
+
+    def auto_register(self):
+        atlas_slice = self.get_atlas_slice()
+        histology_slice = self.get_histology_slice()
+        print(f'Atlas slice: {atlas_slice}, Histology slice: {histology_slice}')
