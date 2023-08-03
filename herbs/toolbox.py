@@ -37,6 +37,8 @@ class ToolBox(QObject):
         self.toa_btn = QAction(QIcon('icons/toolbar/toa.svg'), 'Transform to Atlas Slice Window', self)
         self.toh_btn = QAction(QIcon('icons/toolbar/toh.svg'), 'Transform to Histologist Image Window', self)
         self.check_btn = QAction(QIcon('icons/toolbar/accept.svg'), 'Accept and Transfer', self)
+        self.auto_reg_btn = QAction(QIcon('icons/toolbar/auto_reg_icon.png'), 'Auto Register', self)
+        self.auto_reg_btn.triggered.connect(self.auto_register)
 
         lasso_btn = QAction(QIcon('icons/toolbar/lasso.svg'), 'Polygon Lasso', self)
         lasso_btn.setCheckable(True)
@@ -545,17 +547,3 @@ class ToolBox(QObject):
             self.multi_shanks = True
         else:
             self.multi_shanks = False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
