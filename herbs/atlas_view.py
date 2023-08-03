@@ -1347,14 +1347,12 @@ class AtlasView(QObject):
         self.clear_volume_atlas()
         self.clear_slice_atlas()
 
-
-
-
-
-
-
-
-
-
-
-
+    def get_current_atlas_slice(self):
+        if self.slice_cut == 'Coronal':
+            return self.cimg.img.image
+        elif self.slice_cut == 'Sagittal':
+            return self.simg.img.image
+        elif self.slice_cut == 'Horizontal':
+            return self.himg.img.image
+        else:
+            return None
